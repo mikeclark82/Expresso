@@ -8,7 +8,7 @@ db.serialize(() => {
         name TEXT NOT NULL,
         position TEXT NOT NULL,
         wage INTEGER NOT NULL,
-        is_curent_employee INTEGER DEFAULT 1,
+        is_current_employee INTEGER DEFAULT 1,
         PRIMARY KEY(id)
     );`, err =>{
         if(err) {
