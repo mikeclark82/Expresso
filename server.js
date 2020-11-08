@@ -18,3 +18,5 @@ app.use('/api',apiRouter);
 app.listen(PORT,()=>{
     console.log(`App listening on ${PORT}`);
 });
+
+module.exports = app;

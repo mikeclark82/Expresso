@@ -92,7 +92,10 @@ employeeRouter.delete('/:employeeId',(req,res,next) => {
         if(err){
             next(err)
         }else {
-            res.status(200).send()
+            db.get(`SELECT * FROM Employee WHERE id = ${req.params.employeeId}`,
+                    (err, employee) => {
+                        res.status(200).json({employee: employee});
+                    });
         }
     })
 });
